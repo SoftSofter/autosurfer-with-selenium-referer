@@ -3,7 +3,7 @@
 
 from selenium import webdriver
 import time
-import random
+import secrets
 
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument('--no-startup-window')
@@ -18,7 +18,7 @@ urls.append("https://www.link1.com")
 urls.append("https://www.link2.com")
 # urls.append("etc...")
 
-ran = random.randrange(0, 15, 5)
+ran = secrets.SystemRandom().randrange(0, 15, 5)
 
 
 def navegador(url):
